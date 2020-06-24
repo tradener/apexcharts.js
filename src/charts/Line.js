@@ -371,7 +371,11 @@ class Line {
         x = x + this.xDivision
       }
 
-      if (w.config.chart.stacked) {
+      if (
+        w.config.chart.stacked &&
+        w.config.chart.line &&
+        w.config.chart.line.stacked
+      ) {
         if (
           i > 0 &&
           w.globals.collapsedSeries.length < w.config.series.length - 1
